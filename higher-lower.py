@@ -1,19 +1,20 @@
+
 from random import randint
 x = randint (1, 10)
 
-y = input("Pick a number between 1 and 10, or press q to quit:")
+while True:
+    try:
+        guessed = input("Pick a number between 1 and 10:")
 
-a = int(y)
+    except ValueError:
+        print("Please use a number between 1 and 10. Thank you.")
+    guessed = int(guessed)
 
-q = quit
-
-while y != q:
-    if a == y:
-        print("good job!")
+    if x == guessed:
+        print("Well done, good job!")
         break
+    elif x > guessed:
+        print("guess again, try higer")
     else:
-        print("Guess again!")
-        
-        
-
+        print("guess again, try lower")
 
