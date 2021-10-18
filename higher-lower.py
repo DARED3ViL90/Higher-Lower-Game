@@ -1,10 +1,10 @@
 
 from random import randint
-x = randint (1, 10)
+x = randint (1, 20)
 
 while True:
     try:
-        guessed = input("Pick a number between 1 and 10:")
+        guessed = input("Pick a number between 1 and 20:")
 
     except ValueError:
         print("Please use a number between 1 and 10. Thank you.")
